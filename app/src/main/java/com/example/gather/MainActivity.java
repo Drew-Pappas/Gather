@@ -24,11 +24,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonMainSignUp, buttonMainLogin;
     EditText editTextMainEmail, editTextMainPassword;
     private FirebaseAuth mAuth;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Users");
+    FirebaseUser user = mAuth.getCurrentUser();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //Connect objects with UI elements
         buttonMainLogin = findViewById(R.id.buttonMainLogin);
@@ -54,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.buttonMainLogin:
 
+                //TODO add conditional checking to create a profile if user has not created one
+
                 //ADD MORE TO CARRY OVER USER INFO??
                 Intent FindEventsIntent = new Intent(MainActivity.this, FindEventsActivity.class);
                 startActivity(FindEventsIntent);
@@ -66,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 createAccount(email,password);
 
-                Intent createProfileIntent = new Intent(MainActivity.this, CreateProfileActivity.class);
-                startActivity(createProfileIntent);
-
 
                 break;
+
+
+
         }
     }
 
@@ -83,7 +90,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
 //                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            //Create new user in database with ID for referencing
+                            myRef.child(user.getUid()).child("userID").setValue(user.getUid());
+//
+                            //Take new user to create their profile
+                            Intent createProfileIntent = new Intent(MainActivity.this, CreateProfileActivity.class);
+                            startActivity(createProfileIntent);
+
 //                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
