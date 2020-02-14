@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CreateProfileForm" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_marginBottom">60dp</item>
+    </style>
 </resources>
