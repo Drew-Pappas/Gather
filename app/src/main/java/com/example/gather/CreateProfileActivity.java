@@ -9,8 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
+import com.example.gather.User;
+import com.example.gather.Event;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener {
     Button buttonCreateProfileBack,
@@ -21,10 +24,13 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
             editTextCreateProfileAge,
             editTextCreateProfileBio;
 
+
     ImageView imageViewCreateProfileProfilePicture;
 
     private FirebaseAuth mAuth;
-
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Users");
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,10 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
         editTextCreateProfileLastName = findViewById(R.id.editTextCreateProfileLastName);
         editTextCreateProfileAge = findViewById(R.id.editTextCreateProfileAge);
         editTextCreateProfileBio = findViewById(R.id.editTextCreateProfileBio);
+
+
+
+
     }
 
     @Override
