@@ -12,59 +12,148 @@
             android:id="@+id/cardLocationIcon"
             android:layout_width="62dp"
             android:layout_height="58dp"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="459dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.045"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.649"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/cardCostIcon"
             android:layout_width="71dp"
             android:layout_height="73dp"
-            tools:layout_editor_absoluteX="255dp"
-            tools:layout_editor_absoluteY="437dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.673"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.664"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/cardDescriptionIcon"
             android:layout_width="69dp"
             android:layout_height="68dp"
-            tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="567dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.046"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.855"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/cardTimeIcon"
             android:layout_width="65dp"
             android:layout_height="75dp"
-            tools:layout_editor_absoluteX="237dp"
-            tools:layout_editor_absoluteY="299dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.661"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.455"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/cardBackground"
+            android:id="@+id/cardBackgroundImage"
             android:layout_width="413dp"
             android:layout_height="242dp"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="-2dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.0"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/cardPeopleIcon"
             android:layout_width="67dp"
             android:layout_height="67dp"
-            tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="307dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.046"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.462"
+            card_view:srcCompat="@drawable/ic_group_icon"
             tools:srcCompat="@tools:sample/avatars" />
 
         <EditText
-            android:id="@+id/cardEventTitle"
+            android:id="@+id/cardEventTitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="196dp" />
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.08"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.269" />
+
+        <TextView
+            android:id="@+id/cardGroupSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.255"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.463" />
+
+        <TextView
+            android:id="@+id/cardTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.852"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.463" />
+
+        <TextView
+            android:id="@+id/cardLocationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.255"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.644" />
+
+        <TextView
+            android:id="@+id/cardCostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.855"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.644" />
+
+        <TextView
+            android:id="@+id/cardDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.275"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.828" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
