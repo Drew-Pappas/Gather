@@ -11,7 +11,18 @@
     <string name="age">Age</string>
     <string name="bio">Bio</string>
     <string name="create_event">Create Event</string>
+    <string name="create">Create</string>
+
+    <string name="event_image">Add Image</string>
+    <string name="event_name">Event Name</string>
+    <string name="event_size">Size</string>
+    <string name="event_location">Location</string>
+    <string name="event_time">Time</string>
+    <string name="event_date">Date</string>
+    <string name="event_cost">Cost</string>
+    <string name="event_description">Description</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_create_event">CreateEventActivity</string>
 </resources>

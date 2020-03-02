@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gather.Event;
 import com.example.gather.User;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,9 +25,7 @@ public class FindEventsActivity extends AppCompatActivity implements View.OnClic
 
 
     Button buttonCreateEvent;
-    FrameLayout testFrame;
 
-    private CreateEventFragment createEventFragment;
 
     private FirebaseAuth mAuth;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -40,12 +40,11 @@ public class FindEventsActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_events);
 
-        testFrame = findViewById(R.id.test_frame);
+
 
         buttonCreateEvent = findViewById(R.id.buttonCreateEvent);
         buttonCreateEvent.setOnClickListener(this);
 
-        createEventFragment = new CreateEventFragment();
 
         recyclerView = (RecyclerView) findViewById(R.id.findEventsRecyclerView);
 
@@ -66,12 +65,18 @@ public class FindEventsActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
 
         Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
-        setFragment(createEventFragment);
+
+        switch (view.getId()) {
+
+            case R.id.buttonCreateEvent:
+
+                Intent createEventIntent = new Intent(FindEventsActivity.this, CreateEventActivity.class);
+                startActivity(createEventIntent);
+
+                break;
+        }
+
+
     }
 
-    private void setFragment(Fragment fragment) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.test_frame, fragment); //TODO replace with UI to hold the fragment interface
-        fragmentTransaction.commit();
-    }
 }
